@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Mazer Admin Dashboard</title>
+    <title>Dashboard</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -21,11 +20,8 @@
 
 <body>
     <div id="app">
-
         @include('Admin.pages.partials.komponen.sidebar')
-
         <div id="main" class='layout-navbar'>
-            
             @include('Admin.pages.partials.komponen.header')
 
             <div id="main-content">
@@ -35,10 +31,6 @@
                     </section>
                 </div>
             </div>
-        </div>
-
-        <div id="main">
-            @include('Admin.pages.partials.komponen.footer')
         </div>
     </div>
 
@@ -53,16 +45,3 @@
 </body>
 
 </html>
-
-    {{-- <div id="app">
-
-        @include('Admin.pages.partials.komponen.sidebar')
-
-        <div id="main">
-           
-            @yield('adminKonten')
-
-            @include('Admin.pages.partials.komponen.footer')
-
-        </div>
-    </div> --}}

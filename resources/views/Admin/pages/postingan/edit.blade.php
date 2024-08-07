@@ -15,7 +15,8 @@
                 <div class="col-sm-1">
                     @if ($data->gambar)
                         <div class="mb-3">
-                            <img src="{{ url('foto/postingan') . '/' . $data->gambar }}" style="max-width: 50px; max-height:50px;">
+                            <img src="{{ url('foto/postingan') . '/' . $data->gambar }}"
+                                style="max-width: 50px; max-height:50px;">
                         </div>
                     @endif
                 </div>
@@ -35,7 +36,7 @@
                     value="{{ old('link', $data->link) }}" placeholder="Link...">
             </div>
             <div class="mb-3">
-                <label for="" class="form-label">Isi</label>
+                <label for="" class="form-label">Penjelasan Singkat</label>
                 <textarea name="isi" class="form-control" id="summernote" rows="5">{{ old('isi', $data->isi) }}</textarea>
             </div>
             <button type="submit" class="btn btn-primary">Update</button>

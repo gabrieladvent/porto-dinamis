@@ -11,18 +11,18 @@
         @csrf
         <div class="mb-3">
             <label for="" class="form-label">Universitas</label>
-            <input type="text" name="judul" id="" class="form-control" value="{{ old('judul') }}" placeholder="Universitas...">
+            <input type="text" name="judul" id="" class="form-control" value="{{ old('judul') }}" placeholder="Nama Sekolah / Universitas">
         </div>
         <div class="mb-3">
-            <label for="" class="form-label">Nama Fakultas</label>
-            <input type="text" name="info1" id="info1" class="form-control" value="{{ old('info1') }}" placeholder="Nama Fakultas...">
+            <label for="" class="form-label">Nama Fakultas (Jika memilih Universitas)</label>
+            <input type="text" name="info1" id="info1" class="form-control" value="{{ old('info1') }}" placeholder="Nama Fakultas">
         </div>
         <div class="mb-3">
-            <label for="" class="form-label">Nama Prodi</label>
-            <input type="text" name="info2" id="info2" class="form-control" value="{{ old('info2') }}" placeholder="Nama Prodi...">
+            <label for="" class="form-label">Nama Prodi ((Jika memilih Universitas))</label>
+            <input type="text" name="info2" id="info2" class="form-control" value="{{ old('info2') }}" placeholder="Nama Prodi">
         </div>
         <div class="mb-3">
-            <label for="" class="form-label">Isi</label>
+            <label for="" class="form-label">Penjelasan Singkat</label>
            <textarea name="isi" id="isi" class="form-control"></textarea>
         </div>
 

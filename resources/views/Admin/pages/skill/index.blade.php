@@ -23,17 +23,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @php
-                                    $no = 1;
-                                @endphp
-                                @foreach ($data_softSkill as $item)
+                                @foreach ($data_softSkill as $item => $index)
                                     <tr>
-                                        <td>{{ $no++ }}</td>
-                                        <td>{{ $item->skill }}</td>
+                                        <td>{{ $item + 1 }}</td>
+                                        <td>{{ $index->skill }}</td>
                                         <td>
-                                            <a href="{{ route('skill.edit', $item->id) }}"
+                                            <a href="{{ route('skill.edit', $index->id) }}"
                                                 class="btn btn-warning btn-sm">Edit</a>
-                                            <form action="{{ route('skill.destroy', $item->id) }}" method="post"
+                                            <form action="{{ route('skill.destroy', $index->id) }}" method="post"
                                                 class="d-inline" onsubmit="return confirm('Yakin Mau Hapus Data?')">
                                                 @csrf
                                                 @method('DELETE')

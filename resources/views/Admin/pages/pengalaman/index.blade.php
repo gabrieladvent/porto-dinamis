@@ -1,7 +1,6 @@
 @extends('Admin.pages.partials.main')
 
 @section('adminKonten')
-    
     <div class="card">
 
         <div class="card-header clearfix">
@@ -24,32 +23,29 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @php
-                            $no = 1
-                        @endphp
-                        @foreach ($data as $item) 
-                        <tr>
-                            <td>{{ $no++ }}</td>
-                            <td>{{ $item->judul }}</td>
-                            <td>{{ $item->info1 }}</td>
-                            <td>{{ $item->info2 }}</td>
-                            <td>{{ $item->tgl_mulai_indo }}</td>
-                            <td>{{ $item->tgl_akhir_indo }}</td>
-                            <td>
-                                <a href="{{ route('pengalaman.edit', $item->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                                <form action="{{ route('pengalaman.destroy', $item->id) }}" method="post" class="d-inline" onsubmit="return confirm('Yakin Mau Hapus Data?')">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger btn-sm">Del</button>
-                                </form>
-                            </td>
-                        </tr>
+                        @foreach ($data as $item => $index)
+                            <tr>
+                                <td>{{ $item + 1 }}</td>
+                                <td>{{ $index->judul }}</td>
+                                <td>{{ $index->info1 }}</td>
+                                <td>{{ $index->info2 }}</td>
+                                <td>{{ $index->tgl_mulai_indo }}</td>
+                                <td>{{ $index->tgl_akhir_indo }}</td>
+                                <td>
+                                    <a href="{{ route('pengalaman.edit', $index->id) }}"
+                                        class="btn btn-warning btn-sm">Edit</a>
+                                    <form action="{{ route('pengalaman.destroy', $index->id) }}" method="post"
+                                        class="d-inline" onsubmit="return confirm('Yakin Mau Hapus Data?')">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-sm">Del</button>
+                                    </form>
+                                </td>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>
             </div>
+        </div>
     </div>
-
-    </div>
-
 @endsection
