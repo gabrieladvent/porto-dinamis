@@ -4,11 +4,11 @@
             <div class="col justify-content-center d-flex">
                 <a class="small" href="#">Gabriel Advent</a>
                 <span class="mx-1">&middot;</span>
-                <a class="small" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                    style="cursor: pointer">Contact</a>
+                {{-- <a class="small" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                    style="cursor: pointer">Contact</a> --}}
             </div>
         </div>
     </div>
 </footer>
 
-@include('TampilanUser.partials.komponen.ModalContact')
+{{-- @include('TampilanUser.partials.komponen.ModalContact') --}}

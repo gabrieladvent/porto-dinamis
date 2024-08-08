@@ -43,10 +43,17 @@
                         <p class="lead fw-light mb-4">{{ GetMetaValue('_nama') }}</p>
                         <p class="text-muted">{{ GetMetaValue('_aboutMe') }}</p>
                         <div class="d-flex justify-content-center fs-2 gap-4">
-                            <a class="" target="_blank" href="{{ GetMetaValue('_youtube') }}"><i class="bi bi-linkedin"></i></a>
-                            <a class="text-black" target="_blank" href="{{ GetMetaValue('_instagram') }}"><i class="bi bi-instagram"></i></a>
-                            <a class="text-black" target="_blank" href="{{ GetMetaValue('_github') }}"><i class="bi bi-github"></i></a>
-                            <a target="_blank" href="{{ GetMetaValue('_email') }}"><i class="bi bi-envelope-paper-fill"></i></a>
+                            <a class="" target="_blank" href="{{ GetMetaValue('_youtube') }}"><i
+                                    class="bi bi-linkedin"></i></a>
+
+                            <a class="text-black" target="_blank" href="{{ GetMetaValue('_instagram') }}"><i
+                                    class="bi bi-instagram"></i></a>
+
+                            <a class="text-black" target="_blank" href="{{ GetMetaValue('_github') }}"><i
+                                    class="bi bi-github"></i></a>
+
+                            {{-- <a target="_blank" href="{{ GetMetaValue('_email') }}"><i
+                                    class="bi bi-envelope-paper-fill"></i></a> --}}
                         </div>
                     </div>
                 </div>

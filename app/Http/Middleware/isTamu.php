@@ -18,7 +18,7 @@ class isTamu
     {
         // Jika Sudah Login, Maka Kamu Tidak Bisa Buka Page Login
         if (Auth::check()) {
-            return redirect(route('pendidikan.index'))->withErrors('Anda Sudah Login!');
+            return redirect(route('profile.index'))->withErrors('Anda Sudah Login!');
         }
         return $next($request);
     }
