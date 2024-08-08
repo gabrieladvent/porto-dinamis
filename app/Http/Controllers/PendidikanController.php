@@ -45,20 +45,19 @@ class PendidikanController extends Controller
             'tgl_mulai.required' => 'Tanggal Mulai Wajib Diisi',
         ]);
 
-            $data = [
-                'judul' => $request->judul,
-                'tipe' => $this->tipe,
-                'info1' => $request->info1,
-                'info2' => $request->info2,
-                'isi' => $request->isi,
-                'tgl_mulai' => $request->tgl_mulai,
-                'tgl_akhir' => $request->tgl_akhir,
-            ];
+        $data = [
+            'judul' => $request->judul,
+            'tipe' => $this->tipe,
+            'info1' => $request->info1,
+            'info2' => $request->info2,
+            'isi' => $request->isi,
+            'tgl_mulai' => $request->tgl_mulai,
+            'tgl_akhir' => $request->tgl_akhir,
+        ];
 
-            Riwayat::create($data);
+        Riwayat::create($data);
 
-            return redirect(route('pendidikan.index'))->with('Sukses', 'Data Pendidikan Berhasil Ditambahkan');
-        
+        return redirect(route('pendidikan.index'))->with('Sukses', 'Data Pendidikan Berhasil Ditambahkan');
     }
 
     public function edit(string $id)
@@ -84,19 +83,18 @@ class PendidikanController extends Controller
             'tgl_mulai.required' => 'Tanggal Mulai Wajib Diisi',
         ]);
 
-            $data = [
-                'judul' => $request->judul,
-                'info1' => $request->info1,
-                'info2' => $request->info2,
-                'isi' => $request->isi,
-                'tgl_mulai' => $request->tgl_mulai,
-                'tgl_akhir' => $request->tgl_akhir,
-            ];
+        $data = [
+            'judul' => $request->judul,
+            'info1' => $request->info1,
+            'info2' => $request->info2,
+            'isi' => $request->isi,
+            'tgl_mulai' => $request->tgl_mulai,
+            'tgl_akhir' => $request->tgl_akhir,
+        ];
 
-            Riwayat::where('id', $id)->where('tipe', $this->tipe)->update($data);
+        Riwayat::where('id', $id)->where('tipe', $this->tipe)->update($data);
 
-            return redirect(route('pendidikan.index'))->with('Sukses', 'Data Pendidikan Berhasil Di Update');
-        
+        return redirect(route('pendidikan.index'))->with('Sukses', 'Data Pendidikan Berhasil Di Update');
     }
 
     public function destroy(string $id)

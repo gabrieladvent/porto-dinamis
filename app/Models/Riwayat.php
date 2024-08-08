@@ -15,11 +15,13 @@ class Riwayat extends Model
     // Mengganti Nilai Tanggal (Atur Juga Config app.php)
     protected $appends = ['tgl_mulai_indo', 'tgl_akhir_indo']; //Sesuai urutan
 
-    public function getTglMulaiIndoAttribute(){ // 1 (Mulai)
+    public function getTglMulaiIndoAttribute()
+    { // 1 (Mulai)
         return Carbon::parse($this->attributes['tgl_mulai'])->translatedFormat('d F Y'); // d F Y
     }
-    
-    public function getTglAkhirIndoAttribute(){ // 2 (Mulai)
+
+    public function getTglAkhirIndoAttribute()
+    { // 2 (Mulai)
         if ($this->attributes['tgl_akhir']) {
             return Carbon::parse($this->attributes['tgl_akhir'])->translatedFormat('d F Y'); // d F Y 
         } else {

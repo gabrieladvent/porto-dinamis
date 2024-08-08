@@ -14,11 +14,9 @@ Route::get('/login', [AuthController::class, 'index'])->name('login.index')->mid
 Route::post('/prosesLogin', [AuthController::class, 'login'])->name('login.proses')->middleware('saatTamu');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::redirect('/admin', url('/admin/pendidikan'));
+Route::redirect('/admin', url('/admin/profile'));
 
-Route::prefix('admin')->middleware('saatLogin')->group(
-    function () {
-        
+Route::prefix('admin')->middleware('saatLogin')->group(function () {
         Route::resource('pendidikan', PendidikanController::class);
         Route::resource('pengalaman', PengalamanController::class);
         Route::resource('postingan', PostController::class);
@@ -26,9 +24,7 @@ Route::prefix('admin')->middleware('saatLogin')->group(
 
         Route::get('profile', [ProfileController::class, 'index'])->name('profile.index');
         Route::post('profile/update', [ProfileController::class, 'update'])->name('profile.update');
-        
-    }
-);
+    });
 
 
 // Route Buat User (Tampilan User)

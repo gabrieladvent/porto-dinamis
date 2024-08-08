@@ -19,8 +19,8 @@
                                 <p class="card-text">
                                     {{ $postinganTerbaru->isi }}
                                 </p>
-                                <a href="{{ $postinganTerbaru->link }}" target="_blank"
-                                    class="btn btn-primary">Selengkapnya</a>
+                                {{-- <a href="{{ $postinganTerbaru->link }}" target="_blank"
+                                    class="btn btn-primary">Selengkapnya</a> --}}
                                 <p class="card-text mt-3">
                                     <small class="text-muted">{{ $postinganTerbaru->created_at->diffForHumans() }}</small>
                                 </p>
@@ -45,7 +45,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $item->judul }}</h5>
                                     <p class="card-text">{{ $item->isi }}</p>
-                                    <a href="{{ $item->link }}" target="_blank" class="btn btn-primary">Selengkapnya</a>
+                                    {{-- <a href="{{ $item->link }}" target="_blank" class="btn btn-primary">Selengkapnya</a> --}}
                                 </div>
                                 <div class="card-footer">
                                     <small class="text-body-secondary">Last updated
@@ -58,6 +58,4 @@
             </div>
         </div>
     </section>
-
-    </main>
 @endsection

@@ -10,10 +10,10 @@
                 <section>
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h2 class="fw-bolder mb-0">Experience</h2>
-                        <a class="btn btn-primary btn-sm px-4 py-3" target="_blank" href="{{ getMetaValue('_resume') }}">
+                        {{-- <a class="btn btn-primary btn-sm px-4 py-3" target="_blank" href="{{ getMetaValue('_resume') }}">
                             <div class="d-inline-block bi bi-download me-2"></div>
                             Resume
-                        </a>
+                        </a> --}}
                     </div>
 
                     <!-- Experience Card 1-->
